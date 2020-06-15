@@ -99,7 +99,7 @@ password.onblur = function () {
     validPassword = true;
     validateAll();
   } else {
-    passwordSpan.innerHTML = `Password must be at least six characters and contain at least one number, one lowercase and one uppercase letter. <br> <br> <img src="/img/laughing_emoji" width="200" height="200">`;
+    passwordSpan.innerHTML = `Password must be at least six characters and contain at least one number, one lowercase and one uppercase letter. <br> <br> <img src="img/laughing_emoji.png" width="200" height="200">`;
     validPassword = false;
   }
 };
@@ -116,7 +116,7 @@ confirmPass.onblur = function () {
     validConfirmation = true;
     validateAll();
   } else {
-    confirmSpan.innerHTML = `You entered a different password. <br> <br> <img src="/img/laughing_emoji2" width="200" height="200">`;
+    confirmSpan.innerHTML = `You entered a different password. <br> <br> <img src="img/laughing_emoji2.jpg" width="200" height="200">`;
     validConfirmation = false;
   }
 };
