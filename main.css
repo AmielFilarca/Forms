@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  width: 80vw;
+  max-width: 800px;
+  margin: 5% auto;
+  font-family: "Balsamiq Sans", cursive;
+  background: #fffdcb;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 10%;
+  width: 80%;
+}
+
+label {
+  font-size: 1em;
+  margin: 1%;
+  letter-spacing: 2.2px;
+}
+
+input {
+  font-size: 1em;
+  border-radius: 12px;
+  padding: 1.5% 3%;
+  font-family: "Balsamiq Sans", cursive;
+  letter-spacing: 2px;
+  /* box-shadow: 0px 5px 0px black; */
+}
+
+input[type="password"] {
+  letter-spacing: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 1% 5%;
+  margin: 5% auto;
+  border-radius: 12px;
+  font-family: "Balsamiq Sans", cursive;
+  background: #fffd72;
+  box-shadow: 0px 5px 0px black;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.tooltip {
+  font-size: 0.8rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  animation: all 0.2s ease-in-out;
+}
+
+.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.disabled::before {
+  display: inline-block;
+  position: fixed;
+  top: 45%;
+  left: -10%;
+  content: "";
+  border-top: 10px solid #a5a5a5;
+  width: 120%;
+  transform: rotate(20deg);
+}
+
+.disabled::after {
+  display: inline-block;
+  position: fixed;
+  top: 45%;
+  left: -10%;
+  content: "";
+  border-top: 10px solid #a5a5a5;
+  width: 120%;
+  transform: rotate(-20deg);
+}
+
+.hidden {
+  display: none;
+  transform: translateY(300px);
+}
+
+#success {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  text-align: center;
+  color: #292929;
+  background: #ffef79;
+  padding: 1em;
+  width: 80%;
+  font-size: 2em;
+  border: 5px solid #292929;
+  border-radius: 15px;
+
+  opacity: 0;
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#success button {
+  font-size: 1em;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
